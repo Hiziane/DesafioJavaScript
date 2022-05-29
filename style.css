@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input{
+    background-color: rgb(245, 245, 127);
+}
+
+a{
+    width: 100%;
+    text-decoration: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    display: block;
+}
+
+a:hover{
+     /* background-color: gold;  */
+    color: red;
+    
+}
+
+/* .flex{
+    display: flex;
+} */
+#content{
+    /*background-color: aquamarine;*/
+    width: 20%;
+    height: 100vh;
+    border-right: 1px solid black;
+}
+#barra{
+    /*background-color: burlywood;*/
+    width: 80%;
+    height: auto;
+}
+.ajuste-icones{
+    
+    font-size: 20px;
+}
+
+#ajuste{
+    width: 100%;
+    height: 95vh;
+    display: flex;
+}
+
+ul li{
+    width: 100%;
+    justify-content: left; 
+    list-style: none;
+    margin: 15px;
+}
+
+/* div{
+    width: 400px;
+    height: 300px;
+    border: 1px solid black;
+    margin: 200px auto;
+} */
+
+fieldset{
+    padding: 2px;
+    border: none;
+}
+
+ul{
+    display: none;
+}
+li{
+    display: none
+}
+
+section#formulario{
+    width: 350px;
+    margin: 240px auto; 
+    border: 1px solid black;
+    padding: 5px;
+}
+
+div{
+    width: 100%;
+    height:auto;
+    
+}
+
+ .btn{
+    width: 100%;
+    height: 30px;
+    background-color: rgb(84, 84, 201);
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+
+.txt{
+    width: 100%;
+    height: 30px;
+}

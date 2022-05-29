@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <link rel="stylesheet" href="stylePanel.css">
+      <script src="script.js"></script>
+    <title>Panel - Pedido</title>
+  </head>
+  
+  <body>
+      <main>
+          <section id="formulario">
+            <div id="pai">
+                <div id="menu">
+                        <ul>
+                            <li><a href="#Clientes">
+                                <span class="material-symbols-outlined ajuste-icones">group_add</span> Clientes</a></li>
+                            <li><a href="#Produtos">
+                                <span class="material-symbols-outlined ajuste-icones">redeem</span> Produtos</a></li>
+                            <li><a href="#Pedidos">
+                                <span class="material-symbols-outlined ajuste-icones">shopping_cart</span> Pedidos</a></li>
+                        </ul>
+                </div>
+                <div id="tela">
+                    <form method="post" name="pedido">
+                        <div id="divPedido"> <!--ClassList.add-->
+                            <header>
+                                <label id="txtPed" class="txtPed"><b><u>Pedidos</u></b></label>
+                                <input type="button" value="X" name="btnPed" id="btnPed" class="btns">
+                            </header>
+                            <label for="codCliente">Código do Cliente</label>
+                            <input type="text" value="" name="codCliente" class="txtIn" >
+                            <label for="nomeCliente">Cliente</label>
+                            <input type="text" value="" name="nomeCliente" class="txtIn" >
+                            
+                            <div id="divlocalizar">
+                                <label for="localizar"><b>Localizar Produto</b></label>
+                                <div id="divlocalizaProd">
+                                    <input type="text" value="" name="descricao" class="txtCod">
+                                    <input type="text" value="" name="preco" class="txtLoc">
+                                    <input type="text" value="" name="quantidade" class="txtLoc">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </div> 
+            </div>
+        </section>
+      </main>
+  </body>
+  </html>

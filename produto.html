@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+      <link rel="stylesheet" href="stylePanel.css">
+      <script src="script.js"></script>
+    <title>Panel - Produto</title>
+  </head>
+  
+  <body>
+      <main>
+          <section id="formulario">
+            <div id="pai">
+                <div id="menu">
+                        <ul>
+                            <li><a href="#Clientes">
+                                <span class="material-symbols-outlined ajuste-icones">group_add</span> Clientes</a></li>
+                            <li><a href="#Produtos">
+                                <span class="material-symbols-outlined ajuste-icones">redeem</span> Produtos</a></li>
+                            <li><a href="#Pedidos">
+                                <span class="material-symbols-outlined ajuste-icones">shopping_cart</span> Pedidos</a></li>
+                        </ul>
+                </div>
+                <div id="tela">
+                    <form method="post" name="produto">
+                        <div id="divProduto"> <!--ClassList.add-->
+                            <header>
+                                <label id="txtProd" class="txtProd"><b><u>Produtos</u></b></label>
+                                <input type="button" value="X" name="btnProd" id="btnProd" class="btns">
+                            </header>
+                            <label for="codProduto">Código</label>
+                            <input type="text" value="" name="codCliente" class="txtIn" >
+                            <label for="descricao">Descrição</label>
+                            <input type="text" value="" name="descricao" required class="txtIn">
+                            <label for="preco" class="txtIn"> Preço</label>
+                            <input type="text" value="" name="preco" class="txtIn">
+                            <label for="quantidade" class="txtIn"> Quantidade</label>
+                            <input type="text" value="" name="quantidade" class="txtIn">
+                            <div id="rodape">
+                                <div id="seta">
+                                    <input type="button" value="<" name="btnsetaVir" id="btnVir" class="btnSeta">
+                                    <input type="button" value=">" name="btnsetaIr" id="btnIr" class="btnSeta">
+                                </div>
+                                <div id="botoes">
+                                    <input type="button" value="Novo" name="btnNovo" id="btnNovo"  class="btnAcoes">
+                                    <input type="button" value="Salvar" name="btnSalvar" id="btnSalvar" class="btnAcoes">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div> 
+            </div>
+        </section>
+      </main>
+  </body>
+  </html>
