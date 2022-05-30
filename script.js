@@ -38,44 +38,44 @@ window.onload = function(){
     
     // verifica usuario e senha ---------------------
 
-      function resultadoUsuarioSenha(dadosUsuario){
+    function resultadoUsuarioSenha(dados){
 
-            // for(let usuario in dadosUsuario){
-
-                const findUser = dadosUsuario.find((item) => {
-                    return item.user === user.value && item.pws === pws.value;
-                });
-
-                // if(document.querySelector(#${usuario})){
-                //     document.querySelector(#${usuario}).value = dadosUsuario[usuario];
-                // } else{
-                //     alert('Usuário não encontrado');
-                // }
-                // console.log(usuario); 
-                // console.log(dadosUsuario); 
-            // }
-        }
-
-        let dadosUsuario = async function(usuario, senha){
-            let url = usuario.json;
-
-            try{
-                let dadosFetch = await fetch(url);
-                let dadosJson = await dadosFetch.json();
-                resultadoUsuarioSenha(dadosJson);
-            } catch(error){
-                alert(error);
+        for(let campo in dados){
+            if(document.querySelector(`#${campo}`)){
+                document.querySelector(`#${campo}`).value = dados[campo];
+                alert("entrou if");
+            }else{
+                console.log(campo);
+                alert("entrou no else");
             }
         }
 
-        const btnEntrar = document.querySelector("#botao");
-        const usuario = document.querySelector("#user");
-        const senha = document.querySelector("#pws");
+    }
 
-        btnEntrar.addEventListener('click',function(){
-            dadosUsuario(usuario.value, senha.value);
-        })
-    
+        let dadosUsuario = async function(usuario, senha){
+        const url = " usuario.json" ;
+            //console.log(url);
+            //console.log(usuario,senha); 
+        try{
+            let dadosFetch = await fetch(url);
+            let dadosJson = await dadosFetch.json();
+            //console.log(dadosJson);
+            resultadoUsuarioSenha(dadosJson);
+        } catch(error){
+            alert(error);
+        }
+    }
+
+    const btnEntrar = document.querySelector("#botao");
+    const usuario = document.querySelector("#user");
+    const senha = document.querySelector("#pws");
+
+    //console.log(btnEntrar);
+    btnEntrar.addEventListener('click',function(){
+        dadosUsuario(user.value, pws.value);
+    })
+
+
 
     //------------- termina de verificar usuario e senha --------------
     
@@ -94,42 +94,42 @@ window.onload = function(){
     //btnSalvar
 
     
-    const txcodCliente = document.querySelector("#codCliente");
-    const txnomeCliente = document.querySelector("#nomeCliente");
-    const txdataCadCli = document.querySelector("#dataCadCli");
-    const btnSalvar = document.querySelector("#btnSalvar");
+    // const txcodCliente = document.querySelector("#codCliente");
+    // const txnomeCliente = document.querySelector("#nomeCliente");
+    // const txdataCadCli = document.querySelector("#dataCadCli");
+    // const btnSalvar = document.querySelector("#btnSalvar");
     
 
-    //primeiro vou importar para outra lista
+    // //primeiro vou importar para outra lista
 
-    const auxL = document.querySelector("#ulListaClientes"); 
-    const listaClientes = auxL;
+    // const auxL = document.querySelector("#ulListaClientes"); 
+    // const listaClientes = auxL;
 
     
-    (()=>{
+    // (()=>{
         
-        for (let auxCli of clientes){
-            const filhosLi = document.createElement('li');
+    //     for (let auxCli of clientes){
+    //         const filhosLi = document.createElement('li');
 
-            for(let listaC in auxCli){
-                listaClientes.appendChild(filhosLi).textContent = `${auxCli[listaC]}`
-                console.log(auxCli[listaC]);
-            }
-        }
-    })()
+    //         for(let listaC in auxCli){
+    //             listaClientes.appendChild(filhosLi).textContent = `${auxCli[listaC]}`
+    //             console.log(auxCli[listaC]);
+    //         }
+    //     }
+    // })()
 
     // --------------- btn salvar ------------------------------
 
-    btnSalvar.addEventListener('click', function(){
-        // esta como lista mas é um arrays
+    // btnSalvar.addEventListener('click', function(){
+    //     // esta como lista mas é um arrays
 
-        let lista = document.createElement('li');
-        lista.appendChild(lista).textContent = codCliente.value;
-    })
+    //     let lista = document.createElement('li');
+    //     lista.appendChild(lista).textContent = codCliente.value;
+    // })
  
-    //---------------- btn novo ------------------------------------
+    // //---------------- btn novo ------------------------------------
 
-    btnNovo
-    codCliente = clientes.length + 1 // retorna o tamanho do array +1
+    // btnNovo
+    // codCliente = clientes.length + 1 // retorna o tamanho do array +1
 
 }

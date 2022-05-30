@@ -5,44 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script type="module" src="script.js"></script>
     <title>Index</title>
 </head>
-<script>
-    window.onload = function(){
-        //aqui trazer o endereço do arquivo json
 
-        function resultado(achou){
-
-            for(let campo in dados) {
-                if(document.querySelector(`#${campo}`)){
-
-                }
-            }
-     
-        }
-
-        let dados = function(user, pws){
-            let url = `usuario.json/${user}`;
-            
-            let dadosFetch = fetch(url);
-            let dadosJson = dadosFetch.json();
-            resultado(dadosJson);
-            
-        }
-        
-        const btnBuscar = document.querySelector("#botao");
-        const senha = document.querySelector("#pws");
-        const usuario = document.querySelector("#user");
-
-        btnBuscar.addEventListener('click',function(){
-            // console.log(senha.value);
-            // console.log(usuario.value);
-           dados(usuario.value,senha.value);
-
-        })
-
-    }
-</script>
 <body>
     <main>
         <section id="formulario">
@@ -53,11 +19,7 @@
                     <label for="pws">Senha</label>
                     <input type="password"  class="txt" required id="pws" name="pws" value="">
                     <input type="button" name="botao" id="botao" value="ENTRAR" class="btn">
-                    <!-- <div id="botao">
-                        <button type="submit" class="btn">
-                            Entrar
-                        </button>
-                    </div> -->
+                    
                 </fieldset>
             </form>
         </section>
