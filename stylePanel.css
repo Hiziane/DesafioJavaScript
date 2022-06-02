@@ -2,6 +2,7 @@
     margin: 0;
     box-sizing: border-box;
     padding: 0;
+    
 }
 
      header{
@@ -38,6 +39,7 @@
 
     #divCliente{
         height: 300px;
+        
     }
 
     #divProduto{
@@ -58,6 +60,7 @@
         margin-left: 15px;
         margin-right: 15px;
         padding: 5px;
+        height: auto;
      } 
 
     a{
@@ -123,6 +126,16 @@
     }
 
     .txtCod{
+        width: 15px;
+        height: 20px;
+    }
+
+    .txFixaPreco{
+        width: 15px;
+        height: 20px;
+    }
+
+    .txVar{
         width: 15px;
         height: 20px;
     }

@@ -27,8 +27,8 @@
                 </div>
                 <div id="tela">
                     <form method="post" name="formPanel">
-                        //<ul id="ulListaClientes"></ul>
-                        <div id="divCliente"> <!--ClassList.add-->
+                        <!--<ul id="ulListaClientes"></ul>-->
+                        <div id="divCliente" class="divTeste"> <!--ClassList.add-->
                             <header>
                                 <label id="txtCli" class="txtCli"><b><u>Clientes</u></b></label>
                                 <input type="button" value="X" name="btnCli" id="btnCli" class="btns">
@@ -36,17 +36,17 @@
                             <label for="codCliente">Código</label>
                             <input type="text" value="" name="codCliente" class="txtIn"  id="codCliente">
                             <label for="nomeCliente">Nome</label>
-                            <input type="text" value="" name="nomeCliente" required class="txtIn">
+                            <input type="text" value="" name="nomeCliente" id="nomeCliente" class="txtIn">
                             <label for="dataCadCli" class="txtIn"> Data Cadastro</label>
-                            <input type="text" value="__/__/____" name="dataCadCli" class="txtIn">
+                            <input type="text" value="__/__/____" name="dataCadCli"  id="dataCadCli" class="txtIn">
                             <div id="rodape">
                                 <div id="seta">
-                                    <input type="button" value="<" name="btnsetaVir" id="btnVir" class="btnSeta">
-                                    <input type="button" value=">" name="btnsetaIr" id="btnIr" class="btnSeta">
+                                    <input type="button" value="<" name="btnVir" id="btnVir" class="btnSeta controle">
+                                    <input type="button" value=">" name="btnIr" id="btnIr" class="btnSeta controle">
                                 </div>
                                 <div id="botoes">
-                                    <input type="button" value="Novo" name="btnNovo" id="btnNovo"  class="btnAcoes">
-                                    <input type="button" value="Salvar" name="btnSalvar" id="btnSalvar" class="btnAcoes">
+                                    <input type="button" value="Novo" name="btnNovo" id="btnNovo"  class="btnAcoes controle">
+                                    <input type="button" value="Salvar" name="btnSalvar" id="btnSalvar" class="btnAcoes controle">
                                 </div>
                             </div>
                         </div>
@@ -56,40 +56,42 @@
                                 <input type="button" value="X" name="btnProd" id="btnProd" class="btns">
                             </header>
                             <label for="codProduto">Código</label>
-                            <input type="text" value="" name="codCliente" class="txtIn" >
+                            <input type="text" value="" name="codProduto" id="codProduto" class="txtIn" >
                             <label for="descricao">Descrição</label>
-                            <input type="text" value="" name="descricao" required class="txtIn">
+                            <input type="text" value="" name="descProduto" id="descProduto"  class="txtIn">
                             <label for="preco" class="txtIn"> Preço</label>
-                            <input type="text" value="" name="preco" class="txtIn">
+                            <input type="text" value="" name="precoProduto" id="precoProduto" class="txtIn">
                             <label for="quantidade" class="txtIn"> Quantidade</label>
-                            <input type="text" value="" name="quantidade" class="txtIn">
+                            <input type="text" value="" name="qtdEstoqueProd" id="qtdEstoqueProd" class="txtIn">
                             <div id="rodape">
                                 <div id="seta">
-                                    <input type="button" value="<" name="btnsetaVir" id="btnVir" class="btnSeta">
-                                    <input type="button" value=">" name="btnsetaIr" id="btnIr" class="btnSeta">
+                                    <input type="button" value="<" name="btnVirP" id="btnVirP" class="btnSeta comandos">
+                                    <input type="button" value=">" name="btnIrP" id="btnIrP" class="btnSeta comandos">
                                 </div>
                                 <div id="botoes">
-                                    <input type="button" value="Novo" name="btnNovo" id="btnNovo"  class="btnAcoes">
-                                    <input type="button" value="Salvar" name="btnSalvar" id="btnSalvar" class="btnAcoes">
+                                    <input type="button" value="Novo" name="btnNovo" id="btnNovoP"  class="btnAcoes comandos">
+                                    <input type="button" value="Salvar" name="btnSalvar" id="btnSalvarP" class="btnAcoes comandos">
                                 </div>
                             </div>
                         </div>
-                        <div id="divPedido"> <!--ClassList.add-->
+                        <div id="divPedido"> 
                             <header>
                                 <label id="txtPed" class="txtPed"><b><u>Pedidos</u></b></label>
                                 <input type="button" value="X" name="btnPed" id="btnPed" class="btns">
                             </header>
                             <label for="codCliente">Código do Cliente</label>
-                            <input type="text" value="" name="codCliente" class="txtIn" >
+                            <input type="text" value="" name="codCliPed" id="codCliPed" class="txtIn" >
                             <label for="nomeCliente">Cliente</label>
-                            <input type="text" value="" name="nomeCliente" class="txtIn" >
+                            <input type="text" value="" name="nomeCliPed" id="nomeCliPed" class="txtIn" >
                             
                             <div id="divlocalizar">
                                 <label for="localizar"><b>Localizar Produto</b></label>
                                 <div id="divlocalizaProd">
-                                    <input type="text" value="" name="descricao" class="txtCod">
-                                    <input type="text" value="" name="preco" class="txtLoc">
-                                    <input type="text" value="" name="quantidade" class="txtLoc">
+                                    <input type="text" value="" name="codProPed" id="codProPed" class="txtCod">
+                                    <input type="text" value="" disabled name="descPrdPed" id="descPrdPed" class="txFixa">
+                                    <input type="text" value="" disabled name="precoProdPed" id="precoProdPed" class="txFixaPreco">
+                                    <input type="text" value="" name="qtdEstProdPed" id="qtdEstProdPed" class="txVar">
+                                    <input type="button" value="Lançar no Pedido" name="btnLancar" id="btnLancar" class="btnLancar">    
                                 </div>
                             </div>
                             
