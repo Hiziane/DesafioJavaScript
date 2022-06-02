@@ -294,6 +294,7 @@ comandos.forEach( botao => {
     const txnomeCliPed = document.querySelector("#nomeCliente");
     
    console.log(txcodCliPed.value); 
+   
    txcodCliPed.addEventListener('blur', function(){ //blur -- evento disparado qndo sai do campo
         //carrega os dados na tela
     console.log(txcodCliPed.value);    
@@ -314,5 +315,37 @@ comandos.forEach( botao => {
         }
     }
 })
+ 
+// -------------------- produtos -----------------
+
+    const txcodProdPed = document.querySelector("#codProduto");
+    const txdescProdPed = document.querySelector("#descProduto");
+    
+   console.log(txcodProdPed.value); 
+   
+   txcodProdPed.addEventListener('blur', function(){ //blur -- evento disparado qndo sai do campo
+        //carrega os dados na tela
+    //console.log(txcodProdPed.value);    
+    if (txcodProdPed.value > 0){            
+        for(let i=0; i< produtos.length;i++){
+               // console.log(dados[campo][i]);
+               console.log("for");
+                let aux = (produtos[i].codProduto);
+                let aux2 = (produtos[i].descProduto);
+                
+              
+            if(aux === Number(txcodProdPed.value)){
+               //console.log("if");
+               txdescProdPed.value = aux2;
+               txprecoProduto.value = (produtos[i].precoProduto);
+               txqtdEstoqueProduto.value = (produtos[i].qtdEstoqueProd);
+                i= 100;
+                
+            }  
+        }
+    }
+})
+
+
 
 }
